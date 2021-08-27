@@ -20,7 +20,7 @@ def train_model():
     testset.flattenimageset()
     testset.standardizeimages()
 
-    mod = Model(trainset.dataset, train_set_y, num_of_iterations=1000, learning_rate=0.5)
+    mod = Model(trainset.dataset, train_set_y, num_of_iterations=2000, learning_rate=0.1)
     mod.printshapes()
     W,b = mod.optimize(print_cost=True)
     W = W.tolist()
